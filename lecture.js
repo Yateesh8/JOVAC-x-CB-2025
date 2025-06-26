@@ -1,22 +1,22 @@
-// // var y = function xyz() {
-// //   console.log("Hello, World!");
-// // }
-// // xyz(); //reference error: xyz is not defined
-// // // This will throw an error because xyz is not defined in the global scope
+var y = function xyz() {
+  console.log("Hello, World!");
+}
+xyz(); //reference error: xyz is not defined
+// This will throw an error because xyz is not defined in the global scope
 
-// function showName(){
-//     let name = "Yateesh";
-// }
-// showName(); //function runs here.
-// //After successful execution, 'name' is not reachable 
-// //and will be garbage collected.
+function showName(){
+    let name = "Yateesh";
+}
+showName(); //function runs here.
+//After successful execution, 'name' is not reachable 
+//and will be garbage collected.
 
-// element.addEventListener("event", callback);
+element.addEventListener("event", callback);
 
-//console.log("yateesh gangwar")
+console.log("yateesh gangwar")
 
-// 3 operation functions
-// Operation functions using 'this' instead of arguments or ...nums
+3 operation functions
+Operation functions using 'this' instead of arguments or ...nums
 
 function addAll() {
   let sum = 0;
