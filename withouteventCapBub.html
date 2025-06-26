@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>No Bubbling or Capturing</title>
+</head>
+<body>
+  <h2>Click Any Role</h2>
+
+  <div id="ceo" style="padding: 20px; background-color: #856b1d;">
+    <div id="boss" style="padding: 20px; background-color: #611fa9;">
+      <button id="manager" style="padding: 10px 20px; background-color: #798586; border: none;">
+        Manager
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const ceo = document.getElementById("ceo");
+    const boss = document.getElementById("boss");
+    const manager = document.getElementById("manager");
+
+    ceo.addEventListener("click", function (e) {
+      if (e.currentTarget === e.target) {
+        console.log("ceo");
+      }
+    });
+
+    boss.addEventListener("click", function (e) {
+      if (e.currentTarget === e.target) {
+        console.log("boss");
+      }
+    });
+
+    manager.addEventListener("click", function () {
+      console.log("manager");
+    });
+  </script>
+</body>
+</html>

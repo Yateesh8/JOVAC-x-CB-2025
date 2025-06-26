@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GitHub Profile</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 40px;
+      background: #f0f0f0;
+    }
+    #profile {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 100px;
+      border-radius: 50%;
+    }
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>GitHub Profile Viewer</h1>
+  <div id="profile">Loading...</div>
+
+  <script>
+    fetch("https://api.github.com/users/Yateesh8")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("profile").innerHTML = `
+          <img src="${data.avatar_url}" alt="Avatar">
+          <h2>${data.name || data.login}</h2>
+          <a href="${data.html_url}" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
+                 alt="GitHub" style="width: 20px; vertical-align: middle; margin-right: 5px;">
+            Visit GitHub
+          </a>
+        `;
+      });
+  </script>
+
+</body>
+</html>

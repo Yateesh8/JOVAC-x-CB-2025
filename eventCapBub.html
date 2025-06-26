@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bubbling Example</title>
+</head> <body>
+  <h1 style="text-align: center; color: darkblue;">JavaScript Event Bubbling</h1>
+<div id="DNA" style="padding: 30px; background-color: rgb(209, 37, 37);"> DNA 
+    <div id="RNA" style="padding: 20px; background-color: lightgreen; margin-top: 10px;"> RNA 
+      <button id="Protein" style="margin-top: 10px; padding: 10px 20px; background-color: coral; border: none; color: white;">Protein 
+      </button>
+    </div>
+  </div>
+    <script>
+    const DNA = document.getElementById('DNA');
+    const RNA = document.getElementById('RNA');
+    const Protein = document.getElementById('Protein');
+    DNA.addEventListener('click', () => {
+      console.log("DNA IS CLICKED");
+    });
+    RNA.addEventListener('click', () => {
+      console.log("RNA IS CLICKED");
+    });
+    Protein.addEventListener('click', () => {console.log("PROTEIN IS CLICKED");});
+  </script>
+</body>
+</html>
+
+
+<!-- # Event Capturing
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Capturing Example</title>
+  <style>
+    #school {
+      padding: 40px; background-color: rgb(239, 8, 8);display: flex; 
+      align-items: center; justify-content: center;
+    }
+
+    #college {
+      width: 150px; height: 150px; background-color: rgb(106, 166, 106);
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    #university { width: 100px; height: 100px; background-color: blue;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align: center; color: darkblue;">JavaScript Event Capturing</h1>
+
+  <div id="school">
+    <div id="college">
+      <div id="university">Click Me!</div>
+    </div>
+  </div>
+
+  <script>
+    const school = document.getElementById('school');
+    const college = document.getElementById('college');
+    const university = document.getElementById('university');
+
+    // ADD EVENT LISTENERS (Capturing phase)
+    school.addEventListener('click', () => {
+      console.log("SCHOOL DIV CLICKED");
+    }, true);
+    college.addEventListener('click', () => {
+      console.log("COLLEGE DIV CLICKED");
+    }, true);
+    university.addEventListener('click', () => {
+      console.log("UNIVERSITY DIV IS CLICKED");
+    }, true);
+  </script>
+</body>
+</html> -->
