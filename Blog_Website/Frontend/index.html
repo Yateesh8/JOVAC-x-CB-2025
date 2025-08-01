@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Blog website</h1>
+      <p>Welcome to my simple blog page!</p>
+      <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('about')">About</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About Section -->
+      <section id="about" style="display: none">
+        <h2>About This Project</h2>
+        <p>
+          This is a beginner-friendly blog website created as a personal
+          learning project. It allows users to write, submit, and view blog
+          posts using a simple frontend and a connected backend (Node.js +
+          MongoDB).
+        </p>
+
+        <h3>About Me</h3>
+        <p>
+          My name is Yateesh Gangwar. I'm currently learning full-stack
+          development and exploring how websites work from both frontend and
+          backend sides. This project reflects my progress and practical
+          understanding of web technologies.
+        </p>
+      </section>
+
+      <!-- Contact Section (Optional, hidden for now) -->
+      <section id="contact" style="display: none">
+        <h2>Contact</h2>
+        <p>
+          You can reach out to me on GitHub or other platforms. Contact features
+          will be added soon!
+        </p>
+      </section>
+
+      <section class="post">
+        <h2>My First Blog Post</h2>
+        <p>
+          This is the content of my very first blog post. I'm learning how to
+          build websites!
+        </p>
+      </section>
+
+      <section class="post">
+        <h2>Another Post</h2>
+        <p>
+          Here's another blog post. As I keep learning, this blog will grow!
+        </p>
+      </section>
+      <h2>Write a Blog Post</h2>
+      <input type="text" id="title" placeholder="Blog Title" /><br /><br />
+      <textarea id="content" rows="5" placeholder="Blog Content"></textarea
+      ><br /><br />
+      <button onclick="submitBlog()">Post Blog</button>
+      <p id="blogStatus"></p>
+
+      <button onclick="showMessage()">Click Me</button>
+      <p id="output"></p>
+
+      <button onclick="showDate()">Show Date</button>
+      <p id="date"></p>
+
+      <button onclick="changeBackground()">Change Background</button>
+
+      <br /><br />
+      <input type="text" id="userInput" placeholder="Write something..." />
+      <button onclick="displayUserMessage()">Submit</button>
+      <p id="userMessage"></p>
+
+      <button onclick="readMyBlog()">Read Blog!</button>
+      <button onclick="showMessage()">Click me!</button>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Blog website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
