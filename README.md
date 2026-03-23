@@ -152,7 +152,7 @@ If you find this repository useful:
 
 <div align="center">
 
-👨‍💻 **Yateesh Gangwar,**
+👨‍💻 **Yateesh Gangwar, **
 Aspiring Full Stack Web Developer
 
 </div>
